@@ -18,8 +18,12 @@ export const AboutSection = () => {
               <a href="#contact" className="cosmic-button">
                 Get in touch
               </a>
-              <a href="#contact" className="cosmic-button">
-                Download CV
+              <a
+                href="https://github.com/baolinyang1/Portfolio/blob/main/public/Most_Recent_Resume.pdf"
+                className="cosmic-button"
+                target="_blank"
+                rel="noopener noreferrer">
+                Checkout CV
               </a>
             </div>
           </div>

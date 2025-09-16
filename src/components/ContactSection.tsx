@@ -69,15 +69,15 @@ export const ContactSection = () => {
     try {
       // EmailJS configuration - you'll need to replace these with your actual values
       const result = await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_66fximv", // Replace with your EmailJS service ID
+        "template_66rlbxc", // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_email: "baoliny961@gmail.com", // Your email
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "1stZ0AzC6wdHYN659" // Replace with your EmailJS public key
       );
 
       if (result.text === "OK") {
@@ -257,7 +257,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isLoading}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2",
+                  "cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer",
                   isLoading && "opacity-50 cursor-not-allowed"
                 )}
               >
