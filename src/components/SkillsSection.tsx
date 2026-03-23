@@ -11,8 +11,10 @@ const skills: any = [
 
   //Backend
   { name: "Node.js", level: 95, category: "backend" },
-  { name: "Express", level: 95, category: "backend" },
+  { name: "Express", level: 90, category: "backend" },
   { name: "MySQL", level: 95, category: "backend" },
+  { name: "Python", level: 95, category: "backend"},
+  { name: "C#", level: 95, category: "backend"},
 
   //Tools
   { name: "Git/GitHub", level: 95, category: "tools" },
