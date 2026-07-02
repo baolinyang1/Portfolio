@@ -55,7 +55,7 @@ const highlights = [
 ];
 
 const awards = [
-  "Entrance Scholarship ($2,500) & Academic Excellence Award ($3,000)",
+  "Entrance Scholarship ($3,000) & Academic Excellence Award ($2,500)",
   "Dean's Honor List 2023–2024",
   "Golden Key International Honour Society",
 ];
@@ -107,10 +107,10 @@ export const AboutSection = () => {
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-semibold text-lg">Education</h4>
+                  <h4 className="text-semibold text-lg">Education (2023 - 2027)</h4>
                   <p className="text-muted-foreground">
-                    B.Sc. Honours, Computer Science — Software Engineering
-                    Option
+                    B.Sc. Honours, Computer Science, University of Saskatchewan— Software Engineering
+                    Option 
                   </p>
                 </div>
               </div>

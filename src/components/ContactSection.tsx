@@ -1,8 +1,11 @@
 import {
+  Github,
   Linkedin,
   Mail,
   MapPin,
   Send,
+  Clock,
+  Handshake,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, type FormEvent } from "react";
@@ -13,6 +16,32 @@ interface FormData {
   email: string;
   message: string;
 }
+
+const contactDetails = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "baoliny961@gmail.com",
+    href: "mailto:baoliny961@gmail.com",
+  },
+  {
+    icon: Mail,
+    label: "USask Email",
+    value: "nyk750@usask.ca",
+    href: "mailto:nyk750@usask.ca",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Saskatoon, Saskatchewan, Canada",
+  },
+];
+
+const openTo = [
+  "Full-time & internship opportunities",
+  "Research collaborations & academic projects",
+  "Freelance web & AI development",
+];
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -100,65 +129,64 @@ export const ContactSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary">Touch</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
           Have a project in mind or want to collaborate? Feel free to reach out.
           i'm always open to discussing new opportunies.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4 px-27">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
-                  <a
-                    href="mailto:baoliny961@gmail.com"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.location.href = "mailto:baoliny961@gmail.com";
-                    }}
-                    className="text-primary hover:text-primary-foreground transition-colors duration-300"
-                  >
-                    baoliny961@gmail.com
-                  </a>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <div className="flex flex-col gap-6 text-left">
+
+            <div className="gradient-border p-6 card-hover">
+              <div className="space-y-5">
+                {contactDetails.map((item) => (
+                  <div key={item.label} className="flex items-start gap-4">
+                    <div className="p-3 rounded-full bg-primary/10 shrink-0">
+                      <item.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="grid grid-cols-[7.5rem_1fr] gap-x-4 gap-y-1 w-full min-w-0 items-baseline">
+                      <p className="font-medium text-sm sm:text-base">
+                        {item.label}
+                      </p>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="text-primary hover:underline break-all text-sm sm:text-base"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-muted-foreground text-sm sm:text-base">
+                          {item.value}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-start space-x-4 px-27">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
+            </div>
+
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
+                  <Handshake className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> USask Email</h4>
-                  <a
-                    href="mailto:nyk750@usask.ca"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.location.href = "mailto:nyk750@usask.ca";
-                    }}
-                    className="text-primary hover:text-primary-foreground transition-colors duration-300"
-                  >
-                    nyk750@usask.ca
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 px-27">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-primary hover:text-primary-foreground transition-colors duration-300">
-                    Saskatoon, Canada
-                  </a>
+                  <h4 className="font-semibold text-lg mb-2">Open To</h4>
+                  <ul className="text-muted-foreground text-sm space-y-2">
+                    {openTo.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="text-primary shrink-0">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex justify-center">
+
+            <div className="gradient-border p-6 card-hover text-center">
+              <h4 className="font-semibold text-lg mb-4">Connect With Me</h4>
+              <div className="flex gap-4 justify-center">
                 <a
                   href="https://www.linkedin.com/in/baolin-yang/"
                   target="_blank"
@@ -168,10 +196,19 @@ export const ContactSection = () => {
                 >
                   <Linkedin className="h-6 w-6" />
                 </a>
+                <a
+                  href="https://github.com/baolinyang1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors duration-300"
+                  aria-label="GitHub profile"
+                >
+                  <Github className="h-6 w-6" />
+                </a>
               </div>
             </div>
           </div>
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div className="bg-card p-8 rounded-lg shadow-xs h-full flex flex-col">
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

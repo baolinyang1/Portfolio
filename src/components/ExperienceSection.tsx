@@ -15,6 +15,7 @@ const experiences = [
   {
     title: "Full Stack Web & AI Developer",
     company: "Octyde",
+    status: "Ongoing",
     period: "Jan 2026 – Aug 2026",
     tags: ["Svelte", "Node.js", "MapLibre GL", "YOLO", "PyTorch", "RKNN"],
     highlights: [

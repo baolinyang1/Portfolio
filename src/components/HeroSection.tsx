@@ -21,7 +21,7 @@ export const HeroSection = () => {
             A passionate software engineer specialized in Web Development, AI/Deep learning, and Data Science.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-delay-4">
-            <a href="#work-experience" className="cosmic-button">
+            <a href="#experience" className="cosmic-button">
               View My Work Experience
             </a>
             <a href="#projects" className="cosmic-button">
