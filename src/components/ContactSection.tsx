@@ -1,12 +1,8 @@
 import {
-  Facebook,
-  Instagram,
   Linkedin,
   Mail,
   MapPin,
-  Phone,
   Send,
-  Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, type FormEvent } from "react";
@@ -132,19 +128,19 @@ export const ContactSection = () => {
               </div>
               <div className="flex items-start space-x-4 px-27">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium"> USask Email</h4>
                   <a
-                    href="tel:+16478888888"
+                    href="mailto:nyk750@usask.ca"
                     onClick={(e) => {
                       e.stopPropagation();
-                      window.location.href = "tel:+16478888888";
+                      window.location.href = "mailto:nyk750@usask.ca";
                     }}
                     className="text-primary hover:text-primary-foreground transition-colors duration-300"
                   >
-                    +1 (647) 888-8888
+                    nyk750@usask.ca
                   </a>
                 </div>
               </div>
@@ -162,18 +158,15 @@ export const ContactSection = () => {
             </div>
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
-                  <Linkedin />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitter />
-                </a>
-                <a href="#" target="_blank">
-                  <Instagram />
-                </a>
-                <a href="#" target="_blank">
-                  <Facebook />
+              <div className="flex justify-center">
+                <a
+                  href="https://www.linkedin.com/in/baolin-yang/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors duration-300"
+                  aria-label="LinkedIn profile"
+                >
+                  <Linkedin className="h-6 w-6" />
                 </a>
               </div>
             </div>
