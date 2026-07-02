@@ -145,7 +145,7 @@ export const AboutSection = () => {
                 Get in touch
               </a>
               <a
-                href="https://github.com/baolinyang1/Portfolio/blob/main/public/Final%20Resume%20(1).pdf"
+                href="https://github.com/baolinyang1/Portfolio/blob/main/public/Resume_2026.pdf"
                 className="cosmic-button"
                 target="_blank"
                 rel="noopener noreferrer"
