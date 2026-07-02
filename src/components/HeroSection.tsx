@@ -17,12 +17,15 @@ export const HeroSection = () => {
               Yang
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            A passionate software engineer with a knack for building scalable and efficient web applications.
+          <p className="text-2xl md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+            A passionate software engineer specialized in Web Development, AI/Deep learning, and Data Science.
           </p>
-          <div className="opacity-0 animate-fade-in-delay-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-delay-4">
+            <a href="#work-experience" className="cosmic-button">
+              View My Work Experience
+            </a>
             <a href="#projects" className="cosmic-button">
-              view My Work
+              View My Projects
             </a>
           </div>
         </div>
