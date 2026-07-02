@@ -1,28 +1,52 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 const skills: any = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 94, category: "frontend" },
-  { name: "Typescript", level: 97, category: "frontend" },
-  { name: "Tailwindcss", level: 91, category: "frontend" },
-  { name: "Next.js", level: 95, category: "frontend" },
+  // Web Dev
+  { name: "HTML/CSS", level: 95, category: "Web Development" },
+  { name: "JavaScript/TypeScript", level: 90, category: "Web Development" },
+  { name: "React", level: 95, category: "Web Development" },
+  { name: "Svelte", level: 90, category: "Web Development" },
+  { name: "Tailwindcss", level: 95, category: "Web Development" },
+  { name: "Next.js", level: 95, category: "Web Development" },
+  { name: "Node.js", level: 95, category: "Web Development" },
+  { name: "Express.js", level: 90, category: "Web Development" },
+  { name: "MySQL", level: 95, category: "Web Development" },
+  { name: "PostgreSQL", level: 95, category: "Web Development" },
+  { name: "Python FastAPI", level: 95, category: "Web Development"},
+  { name: "C#", level: 95, category: "Web Development"},
 
-  //Backend
-  { name: "Node.js", level: 95, category: "backend" },
-  { name: "Express", level: 90, category: "backend" },
-  { name: "MySQL", level: 95, category: "backend" },
-  { name: "Python", level: 95, category: "backend"},
-  { name: "C#", level: 95, category: "backend"},
+  // AI/Deep learning
+  { name: "TensorFlow", level: 95, category: "AI/Deep learning" },
+  { name: "PyTorch", level: 95, category: "AI/Deep learning" },
+  { name: "Langchain", level: 95, category: "AI/Deep learning" },
+  { name: "AI Agents", level: 90, category: "AI/Deep learning" },
+  { name: "Large Language Models", level: 90, category: "AI/Deep learning" },
+  { name: "GPU/HPC Training", level: 88, category: "AI/Deep learning" },
+  { name: "Computer Vision", level: 90, category: "AI/Deep learning" },
+  { name: "Hugging Face", level: 85, category: "AI/Deep learning" },
+  { name: "Scikit-learn", level: 85, category: "AI/Deep learning" },
 
-  //Tools
-  { name: "Git/GitHub", level: 95, category: "tools" },
-  { name: "dcoker", level: 90, category: "tools" },
-  { name: "Vs code", level: 90, category: "tools" },
+  // Data Science
+  { name: "Pandas", level: 95, category: "Data Science" },
+  { name: "Numpy", level: 95, category: "Data Science" },
+  { name: "Matplotlib", level: 95, category: "Data Science" },
+  { name: "SQL Querying", level: 85, category: "Data Science" },
+  { name: "Database Management", level: 85, category: "Data Science" },
+  { name: "Database Migration", level: 85, category: "Data Science" },
+
+  // Operating System/Tools
+  { name: "Linux Environment", level: 95, category: "Operating System/Tools" },
+  { name: "Windows Environment", level: 95, category: "Operating System/Tools" },
+  { name: "Bash Scripting", level: 95, category: "Operating System/Tools" },
+  { name: "PowerShell Scripting", level: 95, category: "Operating System/Tools" },
+  { name: "OS virtualization", level: 90, category: "Operating System/Tools" },
+  { name: "Git/GitHub", level: 95, category: "Operating System/Tools" },
+  { name: "Docker", level: 90, category: "Operating System/Tools" },
+  { name: "VS Code", level: 90, category: "Operating System/Tools" },
+  { name: "Conda/Micromamba/Venv", level: 95, category: "Operating System/Tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "Web Development", "AI/Deep learning", "Data Science", "Operating System/Tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
